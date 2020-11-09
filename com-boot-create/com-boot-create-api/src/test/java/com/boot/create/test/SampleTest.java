@@ -2,12 +2,14 @@ package com.boot.create.test;
 
 import java.io.File;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.alibaba.fastjson.JSONObject;
@@ -106,5 +108,12 @@ public class SampleTest {
         result.getRecords().forEach(System.out::println);
     }    
     
+    @Test
+    public void testRedis() {
+        System.out.println(("----- testSelectPage method test ------"));
         
+        RedisTemplate<String,String> one = new RedisTemplate<>();
+        one.opsForValue().setIfPresent("a", "a", 1, TimeUnit.SECONDS);
+        
+    }          
 }

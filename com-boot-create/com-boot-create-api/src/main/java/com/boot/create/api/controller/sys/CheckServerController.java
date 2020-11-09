@@ -27,6 +27,15 @@ public class CheckServerController {
 
 	@RequestMapping(value = "checkServer", method = RequestMethod.GET,produces="application/json")
 	public RespEntity<?> checkServer() {
+		LOGGER.info("begin work!!!!!!!!!!!!!");
+		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		RespEntity<?> entity = new RespEntity<>();
 		entity.setStatus("1");
 		entity.setMsg("http ok!");
