@@ -114,6 +114,7 @@ public class SampleTest {
         
         RedisTemplate<String,String> one = new RedisTemplate<>();
         one.opsForValue().setIfPresent("a", "a", 1, TimeUnit.SECONDS);
-        
-    }          
+    }
+
+
 }

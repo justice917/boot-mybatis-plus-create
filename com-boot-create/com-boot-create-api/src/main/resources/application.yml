@@ -1,0 +1,16 @@
+
+spring:
+  profiles:
+    active: dev
+
+logging:
+  level:
+    com.boot.create: debug
+    
+#mysql generator
+mpgen:
+  package: com.boot.create.mysql  
+
+
+
+      

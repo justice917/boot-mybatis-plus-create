@@ -20,13 +20,22 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
-
-# Logger Config
-logging:
-  level:
-    com.boot.create: debug
+  redis:
+    host: 192.168.26.159
+    port: 6379
+    database: 3
+    timeout: 10s
+    password: wdzj2014
     
-#mysql generator
-mpgen:
-  package: com.boot.create.mysql  
+knife4j:
+  enable: true
+  ## 是否生产 访问控制
+  production: false
+  ## 开启Swagger的Basic认证功能,默认是false 好像没起作用
+  basic:
+    enable: true
+    username: test	
+    password: 123456
+
+
   

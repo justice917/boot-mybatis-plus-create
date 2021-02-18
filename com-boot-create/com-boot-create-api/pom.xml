@@ -38,11 +38,26 @@
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
     </dependency>    
+ 
+	<dependency>
+	    <groupId>com.github.xiaoymin</groupId>
+	    <artifactId>knife4j-spring-boot-starter</artifactId>	
+	</dependency> 
     
-		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>		    
-		</dependency>      
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>		    
+	</dependency>      
+	
+    <dependency> 
+        <groupId>com.google.code.kaptcha</groupId>
+        <artifactId>kaptcha</artifactId>    
+    </dependency>	
+
+	<dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	</dependency>
 
   </dependencies>
   
