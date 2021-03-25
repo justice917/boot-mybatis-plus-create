@@ -14,6 +14,15 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+
+/**
+ * @Author taojin
+ *
+ * 访问地址：http://${host}:${port}/doc.html
+ * 使用参考：https://doc.xiaominfo.com/guide/useful.html
+ *
+ *
+ */
 @Configuration
 @EnableSwagger2
 @EnableKnife4j

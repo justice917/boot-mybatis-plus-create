@@ -63,7 +63,7 @@ public class MysqlGenerator {
       
     	//读取配置文件
         YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
-        yaml.setResources(new ClassPathResource("application.yml"));
+        yaml.setResources(new ClassPathResource("mysqlGen.yml"));
         Properties ymlPro = yaml.getObject();
         System.out.println(ymlPro);
         
@@ -85,7 +85,7 @@ public class MysqlGenerator {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         System.out.println("目录:"+projectPath);
-        gc.setOutputDir(projectPath + "/src/main/java");	
+        gc.setOutputDir(projectPath + "\\com-boot-create-mysql\\src\\main\\java");
         gc.setAuthor("taojin");
         gc.setOpen(false);
         mpg.setGlobalConfig(gc);
