@@ -1,3 +1,19 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 500
+    min-spare-threads: 30
+    connection-timeout: 20s
+    accesslog:
+      enabled: true
+      file-date-format: .yyyy-MM-dd
+      buffered: true
+      directory: logs
+      prefix: access_log
+      suffix: .log
+  port: 8282
+  servlet:
+    context-path: /
 
 spring:
   profiles:
