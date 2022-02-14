@@ -67,16 +67,11 @@ public class MysqlGenerator {
         Properties ymlPro = yaml.getObject();
         System.out.println(ymlPro);
         
-//        String dburl = ymlPro.getProperty("mpgen.dburl");
-//        String username = ymlPro.getProperty("mpgen.username");
-//        String password = ymlPro.getProperty("mpgen.password");
-        
         String dburl = ymlPro.getProperty("spring.datasource.url");
         String username = ymlPro.getProperty("spring.datasource.username");
         String password = ymlPro.getProperty("spring.datasource.password");
 
         String parentPackage = ymlPro.getProperty("mpgen.package");
-        //String baseEntity = ymlPro.getProperty("mpgen.baseEntity");
 
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
@@ -85,6 +80,7 @@ public class MysqlGenerator {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         System.out.println("目录:"+projectPath);
+        //需要改
         gc.setOutputDir(projectPath + "\\com-boot-create-mysql\\src\\main\\java");
         gc.setAuthor("taojin");
         gc.setOpen(false);
